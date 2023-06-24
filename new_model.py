@@ -20,7 +20,7 @@ c11 = 4
 c21 = 4
 c12 = 2
 
-#constants for frequency
+#constants for frequency 
 tau_e = 0.05
 tau_i = 0.05
 
@@ -60,7 +60,7 @@ solution = solve_ivp(system_of_equations, (time[0], time[-1]), initial_condition
 a = (solution.y[0*n:1*n] - solution.y[1*n:2*n])
 av_y = np.dot(w, a)
 
-#Dynamics of E1- E2 response modeling the effect of all 10 populations
+#Dynamics of E1- E2 response modeling the effect of all n populations
 plt.subplot(1, 2, 1)
 plt.plot(solution.t, av_y, label="E1-E2 ", linewidth=2)
 plt.xlabel("Time [s]", fontsize=12)
